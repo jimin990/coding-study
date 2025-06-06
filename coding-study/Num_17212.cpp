@@ -1,10 +1,3 @@
-//
-//  Num_17212.cpp
-//  coding-test
-//
-//  Created by 김지민 on 5/20/25.
-//
-
 #include <iostream>
 #include <climits>
 #include <algorithm>
