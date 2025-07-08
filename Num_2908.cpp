@@ -1,10 +1,3 @@
-//
-//  Num_2908.cpp
-//  coding-test
-//
-//  Created by 김지민 on 6/22/25.
-//
-
 #include <iostream>
 
 int main(void){
