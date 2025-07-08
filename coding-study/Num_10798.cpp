@@ -1,10 +1,3 @@
-//
-//  Num_10798.cpp
-//  coding-test
-//
-//  Created by 김지민 on 7/7/25.
-//
-
 #include <iostream>
 #include <string>
 
