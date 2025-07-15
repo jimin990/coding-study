@@ -1,0 +1,6 @@
+{
+  "code-runner.executorMap": {
+    "cpp": "bash -c 'cd \"$dir\" && filename=\"$fileNameWithoutExt\" && g++ \"$fileName\" -o \"$filename\" && trap \"rm -f $filename\" EXIT && ./$filename'"
+  },
+  "code-runner.runInTerminal": true
+}

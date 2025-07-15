@@ -53,11 +53,11 @@ int main(void){
 
             mid = (st + en ) / 2;
 
-            if(arr[mid] >= k){
-                en = mid;
-            }else if(arr[mid] < k){
-                st = mid + 1;
-            }
+                if(arr[mid] >= k){
+                    en = mid;
+                }else if(arr[mid] < k){
+                    st = mid + 1;
+                }
         }
 
         std::cout << tmp - st << " ";
