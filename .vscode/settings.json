@@ -1,8 +1,8 @@
 {
   "code-runner.executorMap": {
-    "cpp": "bash -c 'cd \"$dir\" && filename=\"$fileNameWithoutExt\" && g++ \"$fileName\" -o \"$filename\" && trap \"rm -f $filename\" EXIT && ./$filename'"
-  },
-  "code-runner.runInTerminal": true,
+  "cpp": "bash -c 'cd \"$(dirname \"$1\")\" && filename=\"$(basename \"$1\" .cpp)\" && g++ \"$1\" -o \"$filename\" && trap \"rm -f $filename\" EXIT && ./$filename' _ $file"
+},
+"code-runner.runInTerminal": true,
   "files.associations": {
     "__bit_reference": "cpp",
     "__hash_table": "cpp",
