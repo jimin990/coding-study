@@ -3,6 +3,7 @@
 int main(void){
     
     long long N;
+    
     std::cin >> N;
 
     long long N2 = N * N;
