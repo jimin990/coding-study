@@ -10,22 +10,16 @@ int main(void){
     int N;
     std::cin >> N;
 
-    int* arr = new int[N+1];
+    std::vector<int> arr(N,0);
 
     std::vector<std::vector<int>> arr1(N+1,std::vector<int>(3,0));
-
-    arr[0] = 0;
 
     for(int i =1;i<=N;i++){
         std::cin >> arr[i];
     }
 
-    arr1[1][0] = 0;
-    
-    for(int i =1;i<3;i++){
-        
-        arr1[1][i] = arr[1];
-    }
+    arr1[1][1] = arr[1];
+    arr1[1][2] = arr[1];
     
     for(int i =2;i<=N;i++){
 
@@ -35,6 +29,6 @@ int main(void){
     }
 
     std::cout << std::max(arr1[N][1],arr1[N][2]);
-
+    
     return 0;
 }
