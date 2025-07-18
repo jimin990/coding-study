@@ -23,7 +23,6 @@ int main(){
         codes.append(str + "\n");
     }
     
-    std::cout <<codes;
-    
+    std::cout <<codes;    
     return 0;
 }
