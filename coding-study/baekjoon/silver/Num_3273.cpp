@@ -34,6 +34,6 @@ int main(void){
     }
 
     std::cout << count/2;
-
+    
     return 0;
 }
