@@ -3,7 +3,7 @@
 
 int main(void){
 
-    int N,M;
+    long long N,M;
     std::cin >> N >> M;
     std::cout << std::abs(N-M);
     return 0;
