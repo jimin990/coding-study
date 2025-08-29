@@ -34,11 +34,11 @@ int main(void){
 
     for(int i =0;i<M;i++){
 
-        std::string commend;
+        std::string command;
 
-        std::cin >> commend;
+        std::cin >> command;
 
-        if(commend == "recommend"){
+        if(command == "recommend"){
             int x;
 
             std::cin >> x;
@@ -48,7 +48,7 @@ int main(void){
             }else{
                 std::cout << (level_problem.begin()) -> second << "\n";
             }
-        }else if(commend == "add"){
+        }else if(command == "add"){
 
             int P,L;
 
@@ -68,8 +68,6 @@ int main(void){
 
         }
     }
-
-    
 
     return 0;
 }
