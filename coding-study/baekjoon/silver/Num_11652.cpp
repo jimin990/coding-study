@@ -1,5 +1,5 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <algorithm>
 #include <utility>
 #include <vector>
@@ -10,7 +10,7 @@ int main(void){
 
     std::cin >> N;
 
-    std::map<long,int> card;
+    std::unordered_map<long,int> card;
 
     for(int i =0;i<N;i++){
         long c;
