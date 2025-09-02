@@ -3,13 +3,16 @@
 
 int N, M;
 
-void recrusion(int j,std::vector<std::vector<bool>> &graph){
+void recrusion(int i,std::vector<bool> &visited, std::vector<std::vector<bool>> &graph){
 
-    for(int i=0;i<N;i++){
-        if(graph[j][i]){
-            graph[j][i] = false;
+    visited[i] = false;
+
+    for(int j =0;j<N;j++){
+        if(graph[i][j]){
+
             graph[i][j] = false;
-            recrusion(i,graph);
+            graph[j][i] = false;
+            recrusion(j,visited,graph);
         }
     }
 }
@@ -19,6 +22,8 @@ int main(void){
     std::cin >> N >> M;
 
     std::vector<std::vector<bool>> graph(N,std::vector<bool>(N));
+
+    std::vector<bool> visited(N,true);
 
     for(int i =0;i<M;i++){
         int u,v;
@@ -32,15 +37,11 @@ int main(void){
     int component = 0;
 
     for(int i =0;i<N;i++){
-        for(int j =0;j<N;j++){
-            if(graph[i][j]){
+        if(visited[i]){
+            visited[i] = false;
 
-                component++;
-
-                graph[i][j] = false;
-                graph[j][i] = false;
-                recrusion(j,graph);
-            }
+            component++;
+            recrusion(i,visited,graph);
         }
     }
 
