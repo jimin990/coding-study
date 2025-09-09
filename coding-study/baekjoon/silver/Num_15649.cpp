@@ -31,8 +31,6 @@ void back(int num){
     }
 }
 
-
-
 int main(void){
 
     std::cin >> N >> M;
