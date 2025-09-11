@@ -13,24 +13,16 @@ int main(void){
     left = str.substr(0,str.find('*'));
     right = str.substr(str.find('*')+1);
 
-    std::reverse(right.begin(),right.end());
-
-    //std::cout << left << "\n" << right;
-
     for(int i =0;i<N;i++){
 
-        std::string tmp,tmp_rev;
+        std::string tmp;
 
         std::cin >> tmp;
 
-        tmp_rev = tmp;
-
-        std::reverse(tmp_rev.begin(),tmp_rev.end());
-
         int find1 = tmp.find(left);
-        int find2 = tmp_rev.find(right);
+        int find2 = tmp.rfind(right);
 
-        if(find1 == 0 && find2 == 0 && (left.size() + right.size()) <= tmp.size()){
+        if(find1 == 0 && (find2 + right.size() == tmp.size()) && (left.size() + right.size()) <= tmp.size()){
             std::cout << "DA";
         }else{
             std::cout << "NE";
