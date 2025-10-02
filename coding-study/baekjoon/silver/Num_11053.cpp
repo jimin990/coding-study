@@ -2,6 +2,29 @@
 #include <vector>
 #include <algorithm>
 
+int BinarySearch(std::vector<int> &subsequence, int n){
+
+    std::vector<int> lis;
+
+    lis.push_back(subsequence[0]);
+
+    int pos = 0;
+
+    for(int i =0;i<n;i++){
+        if(lis[pos] < subsequence[i]){
+            lis.push_back(subsequence[i]);
+            pos++;
+        }else{
+            int move = std::lower_bound(lis.begin(),lis.end(),subsequence[i]) - lis.begin();
+
+            lis[move] = subsequence[i];
+        }
+    }
+
+    return lis.size();
+
+}
+
 int DP(std::vector<int> &subsequence,std::vector<int> &Lis, int n){
 
     int max = 1;
@@ -38,8 +61,8 @@ int main(void){
         std::cin >> A[i];
 
     }
-    
-    std::cout << DP(A,Lis,n);
+
+    std::cout << BinarySearch(A,n);
     
     return 0;
 }
