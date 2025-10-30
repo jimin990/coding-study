@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main(void){
+
+    int N;
+
+    std::cin >> N;
+
+    for(int i =0;i<N;i++){
+        int A,B,X;
+
+        std::cin >> A >> B >> X;
+
+        std::cout << A * (X - 1) + B << "\n";
+    }
+
+    return 0;
+}
